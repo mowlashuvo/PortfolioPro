@@ -713,3 +713,91 @@ footer {
     border-top: 1px solid var(--border-color);
     color: var(--text-light);
 }
+
+/* ===== HERO & PROFILE RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+
+    .hero-content {
+        gap: 40px;
+    }
+
+    .profile-card {
+        max-width: 320px;
+    }
+
+    .profile-img {
+        height: 220px;
+    }
+
+    .profile-photo,
+    .profile-fallback {
+        width: 160px;
+        height: 160px;
+    }
+
+    .hero-text p {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+
+    .profile-card {
+        max-width: 280px;
+    }
+
+    .profile-img {
+        height: 180px;
+    }
+
+    .profile-photo,
+    .profile-fallback {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+/* Ensure hero stacks correctly — this file is loaded after main.css so these rules win */
+@media (max-width: 992px) {
+    .hero-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .hero::before,
+    .hero::after {
+        display: none;
+    }
+
+    .hero-text p {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        gap: 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.6rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.25rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+}

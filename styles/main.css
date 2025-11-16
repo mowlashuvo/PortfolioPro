@@ -1,17 +1,17 @@
-/* ===== CSS VARIABLES & RESET ===== */
+/* ===== UPDATED CSS VARIABLES & RESET ===== */
 :root {
-    --primary-color: #6366f1;
-    --primary-light: #818cf8;
-    --primary-dark: #4f46e5;
-    --secondary-color: #ec4899;
-    --accent-color: #8b5cf6;
-    --text-color: #1f2937;
-    --text-light: #6b7280;
+    --primary-color: #2563eb;
+    --primary-light: #3b82f6;
+    --primary-dark: #1d4ed8;
+    --secondary-color: #059669;
+    --accent-color: #7c3aed;
+    --text-color: #1e293b;
+    --text-light: #64748b;
     --bg-color: #ffffff;
-    --bg-light: #f9fafb;
-    --bg-card: rgba(255, 255, 255, 0.8);
+    --bg-light: #f8fafc;
+    --bg-card: rgba(255, 255, 255, 0.9);
     --bg-glass: rgba(255, 255, 255, 0.25);
-    --border-color: rgba(229, 231, 235, 0.5);
+    --border-color: rgba(226, 232, 240, 0.8);
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -21,18 +21,18 @@
 }
 
 [data-theme="dark"] {
-    --primary-color: #818cf8;
-    --primary-light: #a5b4fc;
-    --primary-dark: #6366f1;
-    --secondary-color: #f472b6;
-    --accent-color: #a78bfa;
-    --text-color: #f9fafb;
-    --text-light: #d1d5db;
+    --primary-color: #3b82f6;
+    --primary-light: #60a5fa;
+    --primary-dark: #2563eb;
+    --secondary-color: #10b981;
+    --accent-color: #8b5cf6;
+    --text-color: #f1f5f9;
+    --text-light: #cbd5e1;
     --bg-color: #0f172a;
     --bg-light: #1e293b;
-    --bg-card: rgba(30, 41, 59, 0.7);
+    --bg-card: rgba(30, 41, 59, 0.8);
     --bg-glass: rgba(15, 23, 42, 0.3);
-    --border-color: rgba(255, 255, 255, 0.1);
+    --border-color: rgba(51, 65, 85, 0.5);
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
@@ -174,6 +174,18 @@ section {
 @media (max-width: 1200px) {
     .hero-text h1 {
         font-size: 3.5rem;
+    }
+}
+
+/* Reduce navigation spacing a bit on medium screens to avoid overflow */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-link {
+        font-size: 0.95rem;
+        padding: 6px 0;
     }
 }
 

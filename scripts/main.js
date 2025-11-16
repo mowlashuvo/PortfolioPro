@@ -34,14 +34,19 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            
+
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
+                // Calculate header height dynamically so scrolling offset matches on mobile and desktop
+                const header = document.getElementById('header');
+                const headerHeight = header ? header.clientHeight : 80;
+                const offset = headerHeight + 16; // small extra gap
+
                 window.scrollTo({
-                    top: targetElement.offsetTop - 80,
+                    top: targetElement.offsetTop - offset,
                     behavior: 'smooth'
                 });
             }
